@@ -1,71 +1,143 @@
-/* Left Code Block */
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  position: fixed;
-  background-color: rgba(24, 22, 22, 0.9);
-  padding: 10px 10px;
-  z-index: 9;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
-
-nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0.3rem;
+ 
+body{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-
-nav ul li a {
-  text-decoration: none;
-  color: rgb(179, 177, 177);
-  margin-inline: 1.3rem;
-  font-weight: 100;
-  font-size: 0.9rem;
-  /* font-size: 40px; */
+ 
+.container{
+    text-align:center;
 }
-
-nav ul li a:hover {
-  color: rgb(234, 234, 234);
+ 
+h1{
+    color:white;
+    font-size:60px;
+    animation:glow 2s infinite;
 }
-
-nav i {
-  font-size: 1.3rem;
-  margin-right: 1.7rem;
-  color: rgb(201, 201, 201);
-  margin-left: 1rem;
+ 
+@keyframes glow{
+    0%{text-shadow:0 0 10px white;}
+    50%{text-shadow:0 0 30px yellow;}
+    100%{text-shadow:0 0 10px white;}
 }
-
-nav i:hover {
-  color: white;
+ 
+.message{
+    margin-top:20px;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
 }
-
-/* Right Code Block - dashboard */
-.main {
-  width: 100%;
-  height: 100vh;
-  background-color: black;
+ 
+.balloons{
+    position:absolute;
+    width:100%;
+    top:50px;
 }
-
-.main .img1 {
-  width: 100%;
-  height: 25rem;
-  position: absolute;
-  z-index: 0;
-  top: 20rem;
+ 
+.balloon{
+    width:60px;
+    height:80px;
+    border-radius:50%;
+    position:absolute;
+    animation:float 5s infinite;
 }
-
-.main .info {
-  text-align: center;
-  color: white;
-  padding-top: 6rem;
+ 
+.red{
+    background:red;
+    left:10%;
 }
-
-.info h1 {
-  font-size: 4rem;
+ 
+.blue{
+    background:blue;
+    left:30%;
 }
-
-.info p {
-  font-size: 2rem;
+ 
+.green{
+    background:green;
+    left:60%;
+}
+ 
+.yellow{
+    background:gold;
+    left:85%;
+}
+ 
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-40px);}
+    100%{transform:translateY(0);}
+}
+ 
+.cake{
+    margin:50px auto;
+    position:relative;
+    width:250px;
+}
+ 
+.cake-top{
+    background:pink;
+    height:60px;
+    border-radius:15px;
+}
+ 
+.cake-base{
+    background:brown;
+    height:80px;
+    border-radius:15px;
+}
+ 
+.candles{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    position:relative;
+    top:10px;
+}
+ 
+.candle{
+    width:10px;
+    height:40px;
+    background:white;
+    position:relative;
+}
+ 
+.flame{
+    width:15px;
+    height:20px;
+    background:orange;
+    border-radius:50%;
+    position:absolute;
+    top:-18px;
+    left:-2px;
+    animation:flicker .5s infinite;
+}
+ 
+@keyframes flicker{
+    0%{opacity:1;}
+    50%{opacity:.5;}
+    100%{opacity:1;}
+}
+ 
+.fireworks{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-image:
+    radial-gradient(circle,white 2px,transparent 2px);
+    background-size:60px 60px;
+    animation:sparkle 3s linear infinite;
+}
+ 
+@keyframes sparkle{
+    from{transform:translateY(0);}
+    to{transform:translateY(-60px);}
 }
